@@ -2,14 +2,14 @@ import { GraphQLID, GraphQLList, GraphQLNonNull } from "graphql";
 import { Users } from "../../entities/users";
 import { UserType } from "../typeDefs/user";
 
-export const GET_ALL_USERS = {
+export const getUserList = {
   type: new GraphQLList(UserType),
   resolve() {
     return Users.find();
   },
 };
 
-export const GET_USER = {
+export const getUserById = {
   type: UserType,
   args: {
     id: { type: new GraphQLNonNull(GraphQLID) },

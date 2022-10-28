@@ -10,7 +10,7 @@ import { hashPassword, comparePassword } from "../../libs/bcrypt";
 import { MessageType } from "../typeDefs/message";
 import { UserType } from "../typeDefs/user";
 
-export const CREATE_USER = {
+export const createUser = {
   type: UserType,
   args: {
     name: { type: new GraphQLNonNull(GraphQLString) },
@@ -32,7 +32,7 @@ export const CREATE_USER = {
   },
 };
 
-export const DELETE_USER = {
+export const deleteUser = {
   type: GraphQLBoolean,
   args: {
     id: { type: new GraphQLNonNull(GraphQLID) },
@@ -44,7 +44,7 @@ export const DELETE_USER = {
   },
 };
 
-export const UPDATE_USER = {
+export const updateUser = {
   type: MessageType,
   args: {
     id: { type: GraphQLID },
