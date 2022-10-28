@@ -11,7 +11,8 @@
     "build": "tsc -p .",
     "lint": "eslint . --ext .ts",
     "prettier": "prettier --check \"src/**/*.ts\"",
-    "format": "prettier --write \"src/**/*.ts\""
+    "format": "prettier --write \"src/**/*.ts\"",
+    "test": "yarn lint && yarn prettier"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
